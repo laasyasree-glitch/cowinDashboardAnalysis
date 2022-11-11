@@ -1,8 +1,8 @@
 .bg {
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   background-color: #161625;
   min-height: 100vh;
   background-size: cover;
