@@ -1,1 +1,25 @@
 /* Write your CSS here */
+.bg {
+  background-color: #161625;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  color: #ffffff;
+}
+.header {
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+img {
+  width: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}

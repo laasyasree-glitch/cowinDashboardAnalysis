@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 import VaccinationCoverage from '../VaccinationCoverage'
 import VaccinationByAge from '../VaccinationByAge'
 import VaccinationByGender from '../VaccinationByGender'
+import './index.css'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -86,12 +87,18 @@ class CowinDashboard extends Component {
     const {data1, data2, data3} = this.state
     return (
       <div>
-        <h1>Vaccination Coverage</h1>
-        <VaccinationCoverage details={data1} />
-        <h1>Vaccination by gender</h1>
-        <VaccinationByGender details={data2} />
-        <h1>Vaccination by age</h1>
-        <VaccinationByAge details={data3} />
+        <div>
+          <h1>Vaccination Coverage</h1>
+          <VaccinationCoverage details={data1} />
+        </div>
+        <div>
+          <h1>Vaccination by gender</h1>
+          <VaccinationByGender details={data2} />
+        </div>
+        <div>
+          <h1>Vaccination by age</h1>
+          <VaccinationByAge details={data3} />
+        </div>
       </div>
     )
   }
@@ -104,15 +111,18 @@ class CowinDashboard extends Component {
 
   render() {
     return (
-      <>
-        <img
-          src="https://assets.ccbp.in/frontend/react-js/cowin-logo.png"
-          alt="website logo"
-        />
-        <h1>Co-WIN</h1>
-        <h1>CoWIN vaccination In India</h1>
+      <div className="bg">
+        <div className="header">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/cowin-logo.png"
+            alt="website logo"
+          />
+          <h1>Co-WIN</h1>
+          <h1>CoWIN Vaccination In India</h1>
+        </div>
+
         {this.renderAllProducts()}
-      </>
+      </div>
     )
   }
 }
