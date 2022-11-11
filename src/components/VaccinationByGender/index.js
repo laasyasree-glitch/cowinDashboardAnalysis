@@ -4,12 +4,17 @@ const VaccinationByGender = props => {
   const {details} = props
   const data1 = details
   console.log(data1)
+  const settings = {
+    width: 300,
+    height: 300,
+  }
+
   return (
     <div>
-      <PieChart width={1000} height={300}>
+      <PieChart {...settings}>
         <Pie
-          cx="70%"
-          cy="40%"
+          cx="50%"
+          cy="60%"
           data={data1}
           startAngle={0}
           endAngle={180}

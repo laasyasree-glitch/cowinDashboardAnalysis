@@ -1,4 +1,5 @@
 import {BarChart, Bar, XAxis, YAxis, Legend} from 'recharts'
+import './index.css'
 
 const VaccinationConverage = props => {
   const {details} = props
@@ -10,9 +11,21 @@ const VaccinationConverage = props => {
     return number.toString()
   }
 
+  const settings = {
+    width: 360,
+    height: 220,
+  }
+
   return (
     <div>
-      <BarChart data={data} width={1000} height={300}>
+      <BarChart
+        className="cont"
+        {...settings}
+        data={data}
+        margin={{
+          top: 5,
+        }}
+      >
         <XAxis
           dataKey="vaccineDate"
           tick={{
@@ -32,14 +45,8 @@ const VaccinationConverage = props => {
             padding: 20,
           }}
         />
-        <Bar
-          dataKey="dose1"
-          name="dose_1"
-          fill="#2d87bb"
-          barSize="20%"
-          borderRadius="50%"
-        />
-        <Bar dataKey="dose2" name="dose_2" fill="#f54394" barSize="20%" />
+        <Bar dataKey="dose1" name="dose_1" fill="#2d87bb" barSize="30%" />
+        <Bar dataKey="dose2" name="dose_2" fill="#f54394" barSize="30%" />
       </BarChart>
     </div>
   )

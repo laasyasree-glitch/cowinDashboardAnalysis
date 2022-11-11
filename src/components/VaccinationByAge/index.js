@@ -4,12 +4,17 @@ import './index.css'
 const VaccinationByAge = props => {
   const {details} = props
   const data = details
+  const settings = {
+    width: 300,
+    height: 300,
+  }
+
   return (
-    <div>
-      <PieChart width={1000} height={300}>
+    <div className="margin">
+      <PieChart {...settings}>
         <Pie
-          cx="70%"
-          cy="40%"
+          cx="50%"
+          cy="30%"
           data={data}
           startAngle={0}
           endAngle={360}

@@ -86,16 +86,16 @@ class CowinDashboard extends Component {
   renderGraphs = () => {
     const {data1, data2, data3} = this.state
     return (
-      <div>
-        <div>
+      <div className="vaccination-container ">
+        <div className="cont">
           <h1>Vaccination Coverage</h1>
           <VaccinationCoverage details={data1} />
         </div>
-        <div>
+        <div className="cont">
           <h1>Vaccination by gender</h1>
           <VaccinationByGender details={data2} />
         </div>
-        <div>
+        <div className="cont">
           <h1>Vaccination by age</h1>
           <VaccinationByAge details={data3} />
         </div>
@@ -117,8 +117,10 @@ class CowinDashboard extends Component {
             src="https://assets.ccbp.in/frontend/react-js/cowin-logo.png"
             alt="website logo"
           />
-          <h1>Co-WIN</h1>
-          <h1>CoWIN Vaccination In India</h1>
+          <h1>
+            <span className="logo-heading ">Co-WIN </span>
+            CoWIN Vaccination In India
+          </h1>
         </div>
 
         {this.renderAllProducts()}
